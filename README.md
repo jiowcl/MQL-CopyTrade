@@ -51,3 +51,8 @@ Copyright (c) 2019 ji-Feng Tsai.<br/>
 MQL-Zmq Copyright (c) Ding Li [ZeroMQ for MQL](https://github.com/dingmaotu).
 
 Code released under the MIT license.
+
+# TODO
+
+- Trading hours during which the subscriber is allowed to trade
+- Copy orders with specific Symbols

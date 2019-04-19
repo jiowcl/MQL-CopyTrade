@@ -17,6 +17,7 @@ Copy Trade System for MetaTrader 4 Client based on MQL script.
 - Close Order (Normal Close, Partial Close)
 - Custom Trading Symbol between Publisher and Subscriber
 - Subscriber Min Lots, Max Lots and Percent Lots
+- Subscriber Invert Original Orders
 - Subscriber Symbol adjust
 - Subscriber Free Margin Check
 
@@ -47,7 +48,7 @@ The Publishers do not need to log in with a trading password, just log in and us
 | `AllowCloseTrade`         | Allow close a order |
 | `AllowModifyTrade`        | Allow modify a order |
 | `AllowSymbols`            | Allow trading Symbols |
-| `InvertOrder`             | Invert origional orders |
+| `InvertOrder`             | Invert original orders |
 | `MinFreeMargin`           | Minimum free margin to open a new order |
 | `SymbolPrefixAdjust`      | Adjust the Symbol Name between A broker and B broker |
 

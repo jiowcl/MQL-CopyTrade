@@ -20,6 +20,8 @@ Copy Trade System for MetaTrader 4 Client based on MQL script.
 - Subscriber Symbol adjust
 - Subscriber Free Margin Check
 
+The Publishers do not need to log in with a trading password, just log in and using the investor password.
+
 # Publisher Optins
 
 | Properties | Description |

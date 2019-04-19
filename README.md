@@ -47,6 +47,7 @@ The Publishers do not need to log in with a trading password, just log in and us
 | `AllowCloseTrade`         | Allow close a order |
 | `AllowModifyTrade`        | Allow modify a order |
 | `AllowSymbols`            | Allow trading Symbols |
+| `InvertOrder`             | Invert origional orders |
 | `MinFreeMargin`           | Minimum free margin to open a new order |
 | `SymbolPrefixAdjust`      | Adjust the Symbol Name between A broker and B broker |
 
@@ -60,5 +61,5 @@ Code released under the MIT license.
 # TODO
 
 - Trading hours during which the subscriber is allowed to trade
-- Invert original trade direction
+- Invert original trade direction (Solved)
 - Copy orders with specific Symbols (Solved)

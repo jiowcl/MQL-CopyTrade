@@ -58,4 +58,5 @@ Code released under the MIT license.
 # TODO
 
 - Trading hours during which the subscriber is allowed to trade
+- Invert original trade direction
 - Copy orders with specific Symbols (Solved)

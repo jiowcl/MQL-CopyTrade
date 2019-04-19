@@ -15,6 +15,7 @@ Copy Trade System for MetaTrader 4 Client based on MQL script.
 - New Order (Market Order, Pending Order)
 - Modify Order (TP, SL)
 - Close Order (Normal Close, Partial Close)
+- Custom Trading Symbol between Publisher and Subscriber
 - Subscriber Min Lots, Max Lots and Percent Lots
 - Subscriber Symbol adjust
 - Subscriber Free Margin Check
@@ -26,6 +27,7 @@ Copy Trade System for MetaTrader 4 Client based on MQL script.
 | `Server`                  | Bind the Publisher server IP address |
 | `ServerDelayMilliseconds` | Push the order to subscriber delay milliseconds |
 | `ServerReal`              | Under real server |
+| `AllowSymbols`            | Allow trading Symbols |
 
 # Subscriber Options
 
@@ -42,12 +44,13 @@ Copy Trade System for MetaTrader 4 Client based on MQL script.
 | `AllowOpenTrade`          | Allow open a new order |
 | `AllowCloseTrade`         | Allow close a order |
 | `AllowModifyTrade`        | Allow modify a order |
+| `AllowSymbols`            | Allow trading Symbols |
 | `MinFreeMargin`           | Minimum free margin to open a new order |
 | `SymbolPrefixAdjust`      | Adjust the Symbol Name between A broker and B broker |
 
 # License
 
-Copyright (c) 2019 ji-Feng Tsai.<br/>
+Copyright (c) 2017-2019 ji-Feng Tsai.<br/>
 MQL-Zmq Copyright (c) Ding Li [ZeroMQ for MQL](https://github.com/dingmaotu).
 
 Code released under the MIT license.
@@ -55,4 +58,4 @@ Code released under the MIT license.
 # TODO
 
 - Trading hours during which the subscriber is allowed to trade
-- Copy orders with specific Symbols
+- Copy orders with specific Symbols (Solved)

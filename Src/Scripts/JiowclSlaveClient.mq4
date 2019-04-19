@@ -1,7 +1,7 @@
 //+------------------------------------------------------------------+
 //|                                            JiowclSlaveClient.mq4 |
 //|                                Copyright 2017-2019, Ji-Feng Tsai |
-//|                                       https://www.metaquotes.net |
+//|                                        https://github.com/jiowcl |
 //+------------------------------------------------------------------+
 #property copyright   "Copyright 2019, Ji-Feng Tsai"
 #property link        "https://github.com/jiowcl/MT4-CopyTrade"
@@ -25,6 +25,7 @@ input bool   AllowOpenTrade          = true;                    // Allow Open a 
 input bool   AllowCloseTrade         = true;                    // Allow Close a Order (Default is true)
 input bool   AllowModifyTrade        = true;                    // Allow Modify a Order (Default is true)
 input string AllowSymbols            = "";                      // Allow Trading Symbols (Ex: EURUSDq,EURUSDx,EURUSDa)
+input bool   InvertOrder             = false;                   // Invert original trade direction (Default is false)
 input double MinFreeMargin           = 0.00;                    // Minimum Free Margin to Open a New Order (Default is 0.00)
 input string SymbolPrefixAdjust      = "";                      // Adjust the Symbol Name as Local Symbol Name (Ex: d=q,d=)
 
@@ -62,6 +63,7 @@ int    order_slippage    = 0;
 bool   order_allowopen   = true; 
 bool   order_allowclose  = true;
 bool   order_allowmodify = true;
+bool   order_invert      = false;
 
 //--- Globales Account
 int    account_subscriber    = 0;
@@ -131,6 +133,7 @@ bool DetectEnvironment()
     order_allowopen = AllowOpenTrade;
     order_allowclose = AllowCloseTrade;
     order_allowmodify = AllowModifyTrade;
+    order_invert = InvertOrder;
     
     account_subscriber = (SignalAccount != "") ? StringToInteger(SignalAccount) : -1;
     account_minmarginfree = MinFreeMargin;
@@ -459,12 +462,44 @@ int MakeOrderOpen(const string symbol,
     
     double vprice = openprice;
     double vlots = GetOrderLots(symbol, lots);
+    int    vtype = type;
     
     // The parameter price must be greater than zero
     if (vprice <= 0.00)
       vprice = SymbolInfoDouble(symbol, SYMBOL_ASK);
+
+    // Invert the origional order
+    if (order_invert)
+      {
+        switch (vtype)
+          {
+            case OP_BUY:
+              vtype = OP_SELL;
+              break;
+
+            case OP_SELL:
+              vtype = OP_BUY;
+              break;
+
+            case OP_BUYLIMIT:
+              vtype = OP_SELLLIMIT;
+              break;
+
+            case OP_BUYSTOP:
+              vtype = OP_SELLSTOP;
+              break;
+
+            case OP_SELLLIMIT:
+              vtype = OP_BUYLIMIT;
+              break;
+
+            case OP_SELLSTOP:
+              vtype = OP_BUYSTOP;
+              break;
+          }
+      }
     
-    switch (type)
+    switch (vtype)
       {
         case OP_BUY:
           ticketid = OrderSend(symbol, OP_BUY, vlots, vprice, order_slippage, sl, tp, comment, 0, 0, clrYellow);

@@ -1,4 +1,4 @@
-# MT4-CopyTrade
+# MQL-CopyTrade
 
 Copy Trade System for MetaTrader 4 Client based on MQL script.
 

@@ -64,3 +64,9 @@ Code released under the MIT license.
 - Trading hours during which the subscriber is allowed to trade
 - Invert original trade direction (Solved)
 - Copy orders with specific Symbols (Solved)
+
+# Donation
+
+If this application help you reduce time to trading, you can give me a cup of coffee :)
+
+[![paypal](https://www.paypalobjects.com/en_US/TW/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3RNMD6Q3B495N&source=url)

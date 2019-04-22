@@ -5,7 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Authors>Ji-Feng Tsai</Authors>
     <Company />
-    <Copyright>Copyright Jiowcl</Copyright>
+    <Copyright>Copyright Jiowcl 2019</Copyright>
+    <Description>Demo application for MQL CopyTrade</Description>
   </PropertyGroup>
 
   <ItemGroup>

@@ -267,6 +267,8 @@ void StopZmqClient()
     Print("UnLoad Subscribe: ", zmq_server);
        
     ArrayFree(local_pclosed);
+    ArrayFree(local_symbolprefix);
+    ArrayFree(local_symbolallow);
     
     if (zmq_runningstatus == true)
       {

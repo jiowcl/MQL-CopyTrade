@@ -174,6 +174,8 @@ void StopZmqServer()
     ArrayFree(orderlot);
     ArrayFree(ordersl);
     ArrayFree(ordertp);
+
+    ArrayFree(local_symbolallow);
     
     Print("Unload Server: ", zmq_server);
     

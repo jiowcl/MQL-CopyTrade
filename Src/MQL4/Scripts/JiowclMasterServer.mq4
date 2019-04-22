@@ -4,7 +4,7 @@
 //|                                        https://github.com/jiowcl |
 //+------------------------------------------------------------------+
 #property copyright   "Copyright 2019, Ji-Feng Tsai"
-#property link        "https://github.com/jiowcl/MT4-CopyTrade"
+#property link        "https://github.com/jiowcl/MQL-CopyTrade"
 #property version     "1.11"
 #property description "MT4 Copy Trade Master application. Push all order-to-subscribers."
 #property strict

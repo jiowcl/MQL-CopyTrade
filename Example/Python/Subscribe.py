@@ -21,7 +21,17 @@ def main():
             message = recvMsg.split(" ")
             order = message[1].split("|")
 
-            print(order)
+            v_action = order[0]
+            v_symbol = order[1]
+            v_ticket = order[2]
+            v_type = order[3]
+            v_openprice = order[4]
+            v_closeprice = order[5]
+            v_lots = order[6]
+            v_sl = order[7]
+            v_tp = order[8]
+            
+            print("Action: ", v_action, ", Symbol: ", v_symbol)
     except KeyboardInterrupt:
         pass
 

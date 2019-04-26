@@ -64,6 +64,7 @@ Code released under the MIT license.
 - Trading hours during which the subscriber is allowed to trade
 - Invert original trade direction (Solved)
 - Copy orders with specific Symbols (Solved)
+- More examples.
 
 # Donation
 

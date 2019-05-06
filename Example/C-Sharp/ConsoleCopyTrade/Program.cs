@@ -1,11 +1,15 @@
 ﻿using System;
 using NetMQ;
 using NetMQ.Sockets;
+using ConsoleCopyTrade.MT4;
 
 namespace ConsoleCopyTrade
 {
     class Program
     {
+        /// <summary>
+        /// Main
+        /// </summary>
         public static void Main(string[] args)
         {
             using (SubscriberSocket subSocket = new SubscriberSocket())
@@ -28,18 +32,21 @@ namespace ConsoleCopyTrade
                     if (orderData.Length != 9)
                         continue;
 
-                    int mt4Login = int.Parse(messageData[0]);
-                    string vAction = orderData[0];
-                    string vSymbol = orderData[1];
-                    //int vTicket = int.Parse(orderData[2]);
-                    //int vType = int.Parse(orderData[3]);
-                    //double vOpenPrice = double.Parse(orderData[4]);
-                    //double vClosePrice = double.Parse(orderData[5]);
-                    //double vLots = double.Parse(orderData[6]);
-                    //double vSL = double.Parse(orderData[7]);
-                    //double vTP = double.Parse(orderData[8]);
+                    Response response = new Response
+                    {
+                        Login = int.Parse(messageData[0]),
+                        Action = orderData[0],
+                        Symbol = orderData[1],
+                        Ticket = int.Parse(orderData[2]),
+                        Type = int.Parse(orderData[3]),
+                        OpenPrice = double.Parse(orderData[4]),
+                        ClosePrice = double.Parse(orderData[5]),
+                        Lots = double.Parse(orderData[6]),
+                        SL = double.Parse(orderData[7]),
+                        TP = double.Parse(orderData[8])
+                    };
 
-                    Console.WriteLine("Login: " + mt4Login + ", Action: " + vAction + ", Symbol: " + vSymbol);
+                    Console.WriteLine("Login: " + response.Login + ", Action: " + response.Action + ", Symbol: " + response.Symbol);
                 }
             }
         }

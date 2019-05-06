@@ -13,4 +13,10 @@
     <PackageReference Include="NetMQ" Version="4.0.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

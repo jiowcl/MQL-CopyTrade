@@ -2,6 +2,9 @@
 
 Copy Trade System for MetaTrader 4 Client based on MQL script.
 
+![GitHub](https://img.shields.io/github/license/jiowcl/MQL-CopyTrade.svg)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/dingmaotu/mql-zmq.svg)
+
 # Environment
 
 - Windows 7 above (recommend)

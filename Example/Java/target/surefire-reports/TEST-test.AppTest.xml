@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="test.AppTest" time="0.002" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\bin"/>
+    <property name="java.vm.version" value="25.71-b00"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:/Developer/Jiowcl/java/test"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="TW"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Developer\Jiowcl\java\test"/>
+    <property name="java.runtime.version" value="1.8.0-25-microsoft-b00"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\User\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="D:/Program Files (x86)/apache-maven-3.6.1/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="MS950"/>
+    <property name="java.library.path" value="C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\User\bin;D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\local\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\bin;C:\Users\User\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;D:\Program Files\CMake\bin;D:\Program Files\mingw-w64\x86_64-8.1.0-win32-seh-rt_v6-rev0\mingw64\bin;D:\Program Files\Java\jdk1.8.0_201\bin;D:\Program Files\Java\jre1.8.0_201\bin;C:\ProgramData\ComposerSetup\bin;D:\Program\wamp64\bin\mariadb\mariadb10.3.12\bin;C:\WINDOWS\System32\OpenSSH;C:\ProgramData\chocolatey\bin;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Python37;D:\Program Files\Git\cmd;D:\Program Files\Go\bin;D:\Program Files\nodejs;D:\Program Files\nodejs;D:\Program\YSIWebDeveloper\Backend\bin\php-7.2.17;C:\Users\User\AppData\Roaming\npm;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;D:\Program Files\HashiCorp\Vagrant\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Roaming\Composer\vendor\bin;D:\Program Files\Microsoft VS Code\bin;D:\Developer\Tester\sonar-scanner-3.2.0.1227-windows\bin;D:\Program Files\flutter\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Users\User\go\bin;C:\Users\User\AppData\Roaming\npm;D:\Program Files (x86)\apache-maven-3.6.1\bin;D:\Program Files\Git\usr\bin\vendor_perl;D:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="maven.conf" value="D:/Program Files (x86)/apache-maven-3.6.1/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="D:/Program Files (x86)/apache-maven-3.6.1/lib/jansi-native"/>
+    <property name="user.home" value="C:\Users\User"/>
+    <property name="user.timezone" value="Asia/Taipei"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="MS950"/>
+    <property name="user.name" value="User"/>
+    <property name="java.class.path" value="D:/Program Files (x86)/apache-maven-3.6.1/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0-25"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\resources.jar;C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\rt.jar;C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\sunrsasign.jar;C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\jsse.jar;C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\jce.jar;C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\charsets.jar;C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\lib\jfr.jar;C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25\jre\classes"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="maven.home" value="D:\Program Files (x86)\apache-maven-3.6.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="https://developercommunity.visualstudio.com"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="test.AppTest" name="testApp" time="0.002"/>
+</testsuite>

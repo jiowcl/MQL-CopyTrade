@@ -26,35 +26,6 @@ Copy Trade System for MetaTrader 4 Client based on MQL script.
 
 The Publishers do not need to log in with a trading password, just log in and using the investor password.
 
-# Publisher Optins
-
-| Properties | Description |
-| --- | --- |
-| `Server`                  | Bind the Publisher server IP address |
-| `ServerDelayMilliseconds` | Push the order to subscriber delay milliseconds |
-| `ServerReal`              | Under real server |
-| `AllowSymbols`            | Allow trading Symbols |
-
-# Subscriber Options
-
-| Properties | Description |
-| --- | --- |
-| `Server`                  | Subscribe the Publisher server IP address |
-| `ServerDelayMilliseconds` | Subscriber from Publisher delay milliseconds |
-| `ServerReal`              | Under real server |
-| `SignalAccount`           | Subscribe the Publisher MT4 account |
-| `MinLots`                 | Limit the minimum lots |
-| `MaxLots`                 | Limit the maximum lots |
-| `PercentLots`             | Lots Percent from Publisher lots |
-| `Slippage`                |  |
-| `AllowOpenTrade`          | Allow open a new order |
-| `AllowCloseTrade`         | Allow close a order |
-| `AllowModifyTrade`        | Allow modify a order |
-| `AllowSymbols`            | Allow trading Symbols |
-| `InvertOrder`             | Invert original orders |
-| `MinFreeMargin`           | Minimum free margin to open a new order |
-| `SymbolPrefixAdjust`      | Adjust the Symbol Name between A broker and B broker |
-
 # License
 
 Copyright (c) 2017-2019 ji-Feng Tsai.<br/>

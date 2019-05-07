@@ -38,7 +38,6 @@ public final class App {
             if (orderData.length != 9)
                 continue;
 
-            System.out.println(messageData[1]);
             System.out.println("Login: " + messageData[0] + ", Action: " + orderData[0] + ", Symbol: " + orderData[1]);
         }
 

@@ -5,7 +5,7 @@ using ConsoleCopyTrade.MT4;
 
 namespace ConsoleCopyTrade
 {
-    class Program
+    public class Program
     {
         /// <summary>
         /// Main

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //|                                           JiowclPublisherServer.mq4 |
-//|                                Copyright 2017-2019, Ji-Feng Tsai |
+//|                                Copyright 2017-2020, Ji-Feng Tsai |
 //|                                        https://github.com/jiowcl |
 //+------------------------------------------------------------------+
 #property copyright   "Copyright 2020, Ji-Feng Tsai"

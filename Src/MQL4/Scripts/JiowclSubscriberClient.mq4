@@ -1,5 +1,5 @@
 //+------------------------------------------------------------------+
-//|                                            JiowclSubscriberClient.mq4 |
+//|                                       JiowclSubscriberClient.mq4 |
 //|                                Copyright 2017-2020, Ji-Feng Tsai |
 //|                                        https://github.com/jiowcl |
 //+------------------------------------------------------------------+

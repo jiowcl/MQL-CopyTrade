@@ -49,7 +49,7 @@ const string app_name    = "Jiowcl Expert Advisor";
 
 //--- Globales ZMQ
 Context context;
-Socket subscriber(context, ZMQ_SUB);
+Socket  subscriber(context, ZMQ_SUB);
 
 string zmq_server        = "";
 uint   zmq_subdelay      = 0;
@@ -87,7 +87,6 @@ void OnStart()
     if (DetectEnvironment() == false)
       {
         Alert("Error: The property is fail, please check and try again.");
-        
         return;
       }
     
@@ -122,27 +121,27 @@ bool DetectEnvironment()
         return false;
       }
     
-    zmq_server = Server;
-    zmq_subdelay = (ServerDelayMilliseconds > 0) ? ServerDelayMilliseconds : 10;
+    zmq_server        = Server;
+    zmq_subdelay      = (ServerDelayMilliseconds > 0) ? ServerDelayMilliseconds : 10;
     zmq_runningstatus = false;
     
-    order_minlots = MinLots;
-    order_maxlots = MaxLots;
+    order_minlots     = MinLots;
+    order_maxlots     = MaxLots;
     order_percentlots = (order_percentlots > 0) ? PercentLots : 100;
-    order_slippage = Slippage;
-    order_allowopen = AllowOpenTrade;
-    order_allowclose = AllowCloseTrade;
+    order_slippage    = Slippage;
+    order_allowopen   = AllowOpenTrade;
+    order_allowclose  = AllowCloseTrade;
     order_allowmodify = AllowModifyTrade;
-    order_invert = InvertOrder;
+    order_invert      = InvertOrder;
     
-    account_subscriber = (SignalAccount != "") ? StringToInteger(SignalAccount) : -1;
+    account_subscriber    = (SignalAccount != "") ? StringToInteger(SignalAccount) : -1;
     account_minmarginfree = MinFreeMargin;
     
     // Load the Symbol prefix maps
     if (SymbolPrefixAdjust != "")
       {
         string symboldata[];
-        int    symbolsize = StringSplit(SymbolPrefixAdjust, ',', symboldata);
+        int    symbolsize  = StringSplit(SymbolPrefixAdjust, ',', symboldata);
         int    symbolindex = 0;
         
         ArrayResize(local_symbolprefix, symbolsize);
@@ -166,7 +165,7 @@ bool DetectEnvironment()
     if (AllowSymbols != "")
       {
         string symboldata[];
-        int    symbolsize = StringSplit(AllowSymbols, ',', symboldata);
+        int    symbolsize  = StringSplit(AllowSymbols, ',', symboldata);
         int    symbolindex = 0;
         
         ArrayResize(local_symbolallow, symbolsize);
@@ -198,7 +197,6 @@ void StartZmqClient()
     if (result != 1)
       {
         Alert("Error: Unable to connect to the server, please check your server settings.");
-        
         return;
       }
     
@@ -232,7 +230,7 @@ void StartZmqClient()
         
         if (message != "" && AccountEquity() > 0.00)
           {
-            singallogin = -1;
+            singallogin     = -1;
             singalorderdata = "";
           
             ParseMessage(message, singallogin, singalorderdata);
@@ -290,13 +288,13 @@ bool ParseMessage(const string message,
     string messagedata[];
     int    size = StringSplit(message, ' ', messagedata);
     
-    login = -1;
+    login     = -1;
     orderdata = "";
     
     if (size != 2)
       return false;
       
-    login = StrToInteger(messagedata[0]);
+    login     = StrToInteger(messagedata[0]);
     orderdata = messagedata[1];
       
     return true;
@@ -339,7 +337,7 @@ bool ParseOrderFromSingal(const int login,
     // Partially closed a trade will have 2 order id (orderid and before orderid)
     if (orderidsize == 2)
       {
-        orderid = StrToInteger(orderiddata[0]);
+        orderid       = StrToInteger(orderiddata[0]);
         beforeorderid = StrToInteger(orderiddata[1]);
       }
     else
@@ -559,7 +557,7 @@ bool MakeOrderClose(const int ticketid,
     
     if (OrderSelect(ticketid, SELECT_BY_TICKET, MODE_TRADES) == true)
       {
-        double price  = closeprice;
+        double price = closeprice;
       
         if (price <= 0.00)
           price = SymbolInfoDouble(symbol, SYMBOL_ASK);
@@ -706,12 +704,12 @@ string GetOrderSymbolPrefix(const string symbol)
     if (symbolprefix_size == 0)
       return result;
     
-    int symbolsize = StringLen(symbol);
+    int symbolsize  = StringLen(symbol);
     int symbolindex = 0;
     
     for (symbolindex=0; symbolindex<symbolprefix_size; symbolindex++)
       {
-        int prefixsize         = StringLen(local_symbolprefix[symbolindex].s_name);
+        int    prefixsize      = StringLen(local_symbolprefix[symbolindex].s_name);
         string symbolname      = StringSubstr(symbol, 0, symbolsize-prefixsize);
         string tradesymbolname = symbolname + local_symbolprefix[symbolindex].d_name;
         
@@ -855,8 +853,8 @@ int FindPartClosedOrderByLocal(const string symbol,
     int ticketid = -1;
     
     int before_orderid = -1;
-    int pclosedsize  = ArraySize(local_pclosed);
-    int pclosedindex = 0;
+    int pclosedsize    = ArraySize(local_pclosed);
+    int pclosedindex   = 0;
     
     for (pclosedindex=0; pclosedindex<pclosedsize; pclosedindex++)
       {
@@ -889,10 +887,10 @@ bool LocalClosedDataSave(const int s_login,
     
     if (ArrayResize(local_pclosed, local_pclosedsize + 1))
       {
-        local_pclosed[local_pclosedsize].s_login = s_login;
-        local_pclosed[local_pclosedsize].s_orderid = s_orderid;
+        local_pclosed[local_pclosedsize].s_login          = s_login;
+        local_pclosed[local_pclosedsize].s_orderid        = s_orderid;
         local_pclosed[local_pclosedsize].s_before_orderid = sl_beforeorderid;
-        local_pclosed[local_pclosedsize].orderid = orderid;
+        local_pclosed[local_pclosedsize].orderid          = orderid;
       }
 
     return result;

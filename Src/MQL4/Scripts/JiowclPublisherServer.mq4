@@ -23,7 +23,7 @@ const string app_name    = "Jiowcl Expert Advisor";
 
 //--- Globales ZMQ
 Context context;
-Socket publisher(context, ZMQ_PUB);
+Socket  publisher(context, ZMQ_PUB);
 
 string zmq_server        = "";
 uint   zmq_pushdelay     = 0;
@@ -43,8 +43,8 @@ int    orderpartiallyclosedid = -1;
 int    prev_ordersize         = 0;
 
 //--- Globales File
-string       local_symbolallow[];
-int          symbolallow_size = 0;
+string local_symbolallow[];
+int    symbolallow_size = 0;
 
 //+------------------------------------------------------------------+
 //| Script program start function                                    |
@@ -54,7 +54,6 @@ void OnStart()
     if (DetectEnvironment() == false)
       {
         Alert("Error: The property is fail, please check and try again.");
-        
         return;
       }
       
@@ -89,8 +88,8 @@ bool DetectEnvironment()
         return false;
       }
     
-    zmq_server = Server;
-    zmq_pushdelay = (ServerDelayMilliseconds > 0) ? ServerDelayMilliseconds : 10;
+    zmq_server        = Server;
+    zmq_pushdelay     = (ServerDelayMilliseconds > 0) ? ServerDelayMilliseconds : 10;
     zmq_runningstatus = false;
     
     // Load the Symbol allow map
@@ -129,7 +128,6 @@ void StartZmqServer()
     if (result != 1)
       {
         Alert("Error: Unable to bind server, please check your port.");
-      
         return;
       }
     
@@ -174,7 +172,6 @@ void StopZmqServer()
     ArrayFree(orderlot);
     ArrayFree(ordersl);
     ArrayFree(ordertp);
-
     ArrayFree(local_symbolallow);
     
     Print("Unload Server: ", zmq_server);
@@ -191,7 +188,7 @@ void StopZmqServer()
 void GetCurrentOrdersOnStart()
   {
     prev_ordersize = 0;
-    ordersize = OrdersTotal();
+    ordersize      = OrdersTotal();
     
     if (ordersize == prev_ordersize)
       return;
@@ -215,11 +212,11 @@ void GetCurrentOrdersOnStart()
         if (OrderSelect(orderindex, SELECT_BY_POS, MODE_TRADES) == false)
           continue;
             
-        orderids[orderindex] = OrderTicket();
+        orderids[orderindex]       = OrderTicket();
         orderopenprice[orderindex] = OrderOpenPrice();
-        orderlot[orderindex] = OrderLots();
-        ordersl[orderindex] = OrderStopLoss();
-        ordertp[orderindex] = OrderTakeProfit();
+        orderlot[orderindex]       = OrderLots();
+        ordersl[orderindex]        = OrderStopLoss();
+        ordertp[orderindex]        = OrderTakeProfit();
       }
   }
 
@@ -273,11 +270,11 @@ void UpdateCurrentOrdersOnTicket()
         if (OrderSelect(orderindex, SELECT_BY_POS, MODE_TRADES) == false)
           continue;
          
-        orderids[orderindex] = OrderTicket();
+        orderids[orderindex]       = OrderTicket();
         orderopenprice[orderindex] = OrderOpenPrice();
-        orderlot[orderindex] = OrderLots();
-        ordersl[orderindex] = OrderStopLoss();
-        ordertp[orderindex] = OrderTakeProfit();
+        orderlot[orderindex]       = OrderLots();
+        ordersl[orderindex]        = OrderStopLoss();
+        ordertp[orderindex]        = OrderTakeProfit();
       }
     
     // Changed the old orders count as current orders count
@@ -377,8 +374,8 @@ int PushOrderModify()
     
     for (orderindex=0; orderindex<ordersize; orderindex++)
       {
-        orderchanged = false;
-        orderpartiallyclosed = false;
+        orderchanged           = false;
+        orderpartiallyclosed   = false;
         orderpartiallyclosedid = -1;
 
         if (OrderSelect(orderindex, SELECT_BY_POS, MODE_TRADES) == false)
@@ -400,7 +397,7 @@ int PushOrderModify()
               {
                 if (StringReplace(ordercomment, "from #", "") >= 0)
                   {
-                    orderpartiallyclosed = true;
+                    orderpartiallyclosed   = true;
                     orderpartiallyclosedid = StringToInteger(ordercomment);
                   }
               }

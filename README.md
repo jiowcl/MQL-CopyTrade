@@ -1,6 +1,6 @@
 # MQL-CopyTrade
 
-Copy Trade System for MetaTrader 4/MetaTrader5 Client based on MQL script.
+Copy Trade System for MetaTrader 4/MetaTrader 5 Client based on MQL script.
 
 ![GitHub](https://img.shields.io/github/license/jiowcl/MQL-CopyTrade.svg)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/dingmaotu/mql-zmq.svg)

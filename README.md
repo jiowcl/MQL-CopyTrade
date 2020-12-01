@@ -19,6 +19,7 @@ Copy Trade System for MetaTrader 4/MetaTrader 5 Client based on MQL script.
 - Modify Order (TP, SL)
 - Close Order (Normal Close, Partial Close)
 - Custom Trading Symbol between Publisher and Subscriber
+- Subscriber Copy From Multi-Publisher
 - Subscriber Min Lots, Max Lots and Percent Lots
 - Subscriber Invert Original Orders
 - Subscriber Symbol adjust

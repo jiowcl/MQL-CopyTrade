@@ -36,7 +36,7 @@ Code released under the MIT license.
 
 ## TODO
 
-- Trading hours during which the subscriber is allowed to trade
+- Trading hours during which the subscriber is allowed to trade (Solved)
 - Invert original trade direction (Solved)
 - Copy orders with specific Symbols (Solved)
 - More examples

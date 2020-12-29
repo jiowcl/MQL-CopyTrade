@@ -58,7 +58,7 @@ bool   zmq_runningstatus = false;
 //--- Globales Order
 double order_minlots     = 0.00;
 double order_maxlots     = 0.00;
-double order_percentlots = 1;
+double order_percentlots = 100;
 int    order_slippage    = 0;
 bool   order_allowopen   = true; 
 bool   order_allowclose  = true;
@@ -127,7 +127,7 @@ bool DetectEnvironment()
     
     order_minlots     = MinLots;
     order_maxlots     = MaxLots;
-    order_percentlots = (order_percentlots > 0) ? PercentLots : 100;
+    order_percentlots = (PercentLots > 0) ? PercentLots : 100;
     order_slippage    = Slippage;
     order_allowopen   = AllowOpenTrade;
     order_allowclose  = AllowCloseTrade;

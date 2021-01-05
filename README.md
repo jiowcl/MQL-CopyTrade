@@ -46,3 +46,5 @@ Code released under the MIT license.
 If this application help you reduce time to trading, you can give me a cup of coffee :)
 
 [![paypal](https://www.paypalobjects.com/en_US/TW/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3RNMD6Q3B495N&source=url)
+
+[Paypal Me](https://paypal.me/jiowcl?locale.x=zh_TW)

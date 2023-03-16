@@ -29,7 +29,7 @@ The Publishers do not need to log in with a trading password, just log in and us
 
 ## License
 
-Copyright (c) 2017-2021 Ji-Feng Tsai.  
+Copyright (c) 2017-2023 Ji-Feng Tsai.  
 MQL-Zmq Copyright (c) Ding Li [ZeroMQ for MQL](https://github.com/dingmaotu).  
 
 Code released under the MIT license.

@@ -1,9 +1,9 @@
 //+------------------------------------------------------------------+
 //|                                       JiowclSubscriberClient.mq4 |
-//|                                Copyright 2017-2021, Ji-Feng Tsai |
+//|                                Copyright 2017-2024, Ji-Feng Tsai |
 //|                                        https://github.com/jiowcl |
 //+------------------------------------------------------------------+
-#property copyright   "Copyright 2021, Ji-Feng Tsai"
+#property copyright   "Copyright 2024, Ji-Feng Tsai"
 #property link        "https://github.com/jiowcl/MQL-CopyTrade"
 #property version     "1.12"
 #property description "MT4 Copy Trade Subscriber Application. Subscribe order status from source signal trader."

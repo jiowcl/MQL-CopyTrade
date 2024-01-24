@@ -402,6 +402,9 @@ int PushOrderModify()
                   }
               }
           }
+          
+        if(orderopenprice[orderindex] != OrderOpenPrice())
+         orderchanged = true;  
 
         if (ordersl[orderindex] != OrderStopLoss())
           orderchanged = true;

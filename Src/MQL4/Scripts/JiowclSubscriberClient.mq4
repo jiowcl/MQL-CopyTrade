@@ -405,6 +405,11 @@ bool MakeOrder(const int login,
       {
         ticketid = FindOrderBySingalComment(symbol, beforeorderid);
               
+         if (ticketid <= 0)
+          {
+            ticketid = FindPartClosedOrderByLocal(symbol, beforeorderid);
+          }
+          
         if (ticketid > 0)
           {
             //string localmessage = StringFormat("%d|%d-%d|%d", login, orderid, beforeorderid, ticketid);
